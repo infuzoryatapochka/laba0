@@ -1,0 +1,37 @@
+mkdir laba0 // создание локального каталога
+cd laba0/ // переход в новый каталог
+git init // инициализация пустого каталога
+touch file.txt // создание файла в папке
+git add . // добавление в индекс
+git commit -m "first commit" // коммит
+git remote add origin https://github.com/infuzoryatapochka/laba0.git // добавление удаленного репозитория
+git push origin master // пуш 
+git branch develop // создание ветки
+git checkout develop // переключение на нее
+git branch b1 // создание ветки от предыдущей
+git checkout b1 //переключение
+code . // открываем vsc для изменения файла
+git add file.txt // добавление изменений в индекс
+git commit -m "add first line" // коммит 
+git push origin b1 // пуш
+cd .. // поднимаемся на уровень выше
+mkdir qwert // создание новой папки
+cd qwert/ // переход в нее
+git clone https://github.com/infuzoryatapochka/laba0.git // клонирование репозитория с гитхаба в эту папку
+git checkout develop // переключение на ветку
+git branch b2 // создание ветки
+git checkout b2 // переключение на нее
+code . // открываем vsc для изменения файла во второй папке
+git add file.txt // добавление изменений в индекс
+git commit -m "Add first line in b2" // коммит
+git push origin b2 // пуш на удаленный
+cd ../../laba0 // переход к первой ветке
+git checkout develop // переключение
+git fetch // получение изменений с удаленного
+git merge b1 // слияние веток
+git push origin develop // пуш
+git merge origin/b2 // слияние второй, в результате чего появился конфликт
+git add file.txt // добавление изменений после решения
+git commit //коммитим изменения
+git push origin develop // пуш
+
